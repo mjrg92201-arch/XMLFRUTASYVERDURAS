@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMJ Frutería & Verdurería | Frescos y Naturales 🇨🇷</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            950: '#132D15',
+                            900: '#1E4620', // Verde bosque profundo del logo XMJ
+                            800: '#27592A',
+                            700: '#337037',
+                        },
+                        leaf: {
+                            400: '#9CCC65',
+                            500: '#7CB342', // Verde hoja fresco
+                            600: '#4CAF50',
+                        },
+                        citrus: {
+                            400: '#FFB74D',
+                            500: '#FF9800', // Naranja zanahoria / mandarina
+                            600: '#F57C00',
+                        },
+                        banana: {
+                            400: '#FDD835',
+                            500: '#FBC02D', // Amarillo banano
+                        },
+                        cream: {
+                            50: '#FAF9F5',  // Crema natural cálido del logo
+                            100: '#F4F1EA',
+                        },
+                        pastel: {
+                            mint: '#E6F4EA',    // Verde menta suave
+                            peach: '#FDF0E6',   // Durazno pastel
+                            yellow: '#FFF9E6',  // Amarillo crema pastel
+                            lime: '#F1F8E9',    // Verde lima claro
+                            festive: '#FFF5F5', // Rojo navideño pastel muy suave
+                        },
+                        festive: {
+                            red: '#B71C1C',
+                            crimson: '#D32F2F',
+                            gold: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Barra de desplazamiento personalizada en armonía con el logo XMJ */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF9F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E4620;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F57C00;
+        }
+        .fresh-gradient-text {
+            background: linear-gradient(135deg, #FBC02D 0%, #FF9800 50%, #F57C00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .citrus-border-glow {
+            box-shadow: 0 0 18px rgba(245, 124, 0, 0.35);
+        }
+        .glass-forest {
+            background: rgba(30, 70, 32, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        /* Encuadre circular limpio para el logotipo XMJ */
+        .xmj-logo-frame {
+            background-color: #F7F6F2;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <!-- BARRA SUPERIOR DE ANUNCIOS -->
+    <div class="bg-forest-950 border-b border-citrus-500/30 text-cream-50 text-xs sm:text-sm py-2 px-4 font-medium">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <div class="hidden md:flex items-center space-x-4 text-xs text-leaf-400">
+                <span><i class="fa-solid fa-location-dot text-citrus-500 mr-1"></i> San Isidro, Alajuela, Costa Rica</span>
+                <span><i class="fa-solid fa-clock text-citrus-500 mr-1"></i> Lunes a Sábado</span>
+            </div>
+            <div class="w-full md:w-auto text-center text-cream-50">
+                🇨🇷 <span class="text-banana-400 font-bold">Frescos y Naturales</span> | Retiro en local o envío a domicilio en Alajuela
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs">
+                <span class="text-leaf-400">SINPE Móvil: <strong class="text-citrus-400">7086-1827</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENCABEZADO PRINCIPAL / NAVBAR -->
+    <header class="sticky top-0 z-40 glass-forest border-b-2 border-citrus-500/40 transition-all duration-300 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 sm:gap-4">
+            
+            <!-- LOGO OFICIAL XMJ FRUTERÍA & VERDURERÍA -->
+            <a href="#" class="flex items-center gap-3 group shrink-0">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full xmj-logo-frame border-2 border-citrus-500 ring-2 ring-forest-900 shadow-md group-hover:scale-105 transition-transform duration-200 p-0.5">
+                    <!-- SVG Vectorial Nítido del Logo XMJ Frutería & Verdurería -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-full h-full">
+                        <circle cx="100" cy="100" r="95" fill="#F7F6F2" stroke="#1E4620" stroke-width="6"/>
+                        <circle cx="100" cy="100" r="88" fill="none" stroke="#7CB342" stroke-width="1.5" stroke-dasharray="4 4"/>
+                        <!-- Hojas verdes superiores -->
+                        <path d="M58 72 Q48 48 70 46 Q84 46 86 68 Q74 82 58 72 Z" fill="#7CB342" stroke="#1E4620" stroke-width="3.5"/>
+                        <path d="M100 66 Q94 40 112 38 Q126 42 120 66 Q110 76 100 66 Z" fill="#4CAF50" stroke="#1E4620" stroke-width="3.5"/>
+                        <!-- Naranja -->
+                        <circle cx="82" cy="66" r="14" fill="#FF9800" stroke="#1E4620" stroke-width="3.5"/>
+                        <!-- Banano -->
+                        <path d="M86 78 Q104 74 108 46 Q117 58 106 80 Q94 88 86 78 Z" fill="#FBC02D" stroke="#1E4620" stroke-width="3.5"/>
+                        <!-- Zanahoria -->
+                        <path d="M112 78 L134 54 L141 61 L119 84 Z" fill="#F57C00" stroke="#1E4620" stroke-width="3.5"/>
+                        <!-- Tomate -->
+                        <circle cx="136" cy="75" r="10.5" fill="#E53935" stroke="#1E4620" stroke-width="3.5"/>
+                        <!-- Hojas laterales decorativas -->
+                        <path d="M26 104 Q36 92 46 104 Q36 116 26 104 Z" fill="#7CB342" stroke="#1E4620" stroke-width="2.5"/>
+                        <path d="M174 104 Q164 92 154 104 Q164 116 174 104 Z" fill="#7CB342" stroke="#1E4620" stroke-width="2.5"/>
+                        <!-- Siglas XMJ -->
+                        <text x="100" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="45" fill="#4CAF50" stroke="#1E4620" stroke-width="3.2" letter-spacing="1">XMJ</text>
+                        <!-- Subtítulos -->
+                        <text x="100" y="141" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="11.2" fill="#1E4620">FRUTERÍA &amp; VERDURERÍA</text>
+                        <text x="100" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="8.8" fill="#F57C00">FRESCOS Y NATURALES</text>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg sm:text-2xl font-serif font-extrabold text-white tracking-tight leading-none flex items-center gap-1.5">
+                        <span>XMJ</span>
+                        <span class="text-leaf-400 font-sans font-bold text-sm sm:text-lg">Frutería & Verdurería</span>
+                    </span>
+                    <span class="text-[10px] uppercase tracking-widest text-citrus-400 font-bold mt-1">
+                        • Frescos y Naturales •
+                    </span>
+                </div>
+            </a>
+
+            <!-- BUSCADOR (ESCRITORIO) -->
+            <div class="hidden md:flex flex-1 max-w-md mx-4">
+                <div class="relative w-full">
+                    <input type="text" id="headerSearchInput" oninput="handleSearch(this.value)" 
+                           placeholder="Buscar banano, tomate, papa, manzana..." 
+                           class="w-full bg-forest-950/90 text-cream-50 placeholder-leaf-400/70 text-sm rounded-full pl-10 pr-4 py-2.5 border border-leaf-500/40 focus:outline-none focus:border-citrus-500 focus:ring-1 focus:ring-citrus-500 transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-citrus-400 text-sm"></i>
+                </div>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN Y CARRITO -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                
+                <!-- ACCESO DIRECTO TEMPORADA NAVIDEÑA -->
+                <button onclick="openHolidayTab()" class="flex items-center gap-1.5 bg-gradient-to-r from-festive-red to-red-800 hover:from-red-700 hover:to-festive-red text-white text-xs font-extrabold py-2.5 px-3 sm:px-4 rounded-full transition-all shadow-md border border-festive-gold/80">
+                    <span>🎄</span>
+                    <span class="hidden lg:inline">Temporada Navideña</span>
+                    <span class="lg:hidden">Navidad</span>
+                </button>
+
+                <!-- CONTACTO DIRECTO WHATSAPP -->
+                <a href="https://wa.me/50670861827?text=Hola,%20quisiera%20hacer%20un%20pedido%20en%20XMJ%20Fruter%C3%ADa%20%26%20Verdurer%C3%ADa" target="_blank" class="hidden sm:flex items-center gap-2 bg-leaf-600 hover:bg-leaf-500 text-white text-xs font-bold py-2.5 px-4 rounded-full transition-all shadow-md border border-leaf-400/40">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>7086-1827</span>
+                </a>
+
+                <!-- BOTÓN CARRITO -->
+                <button onclick="toggleCartDrawer()" class="relative bg-forest-800 hover:bg-forest-700 border-2 border-citrus-500/70 p-2.5 sm:px-4 sm:py-2.5 rounded-full flex items-center gap-2.5 text-white transition-all group hover:citrus-border-glow">
+                    <div class="relative">
+                        <i class="fa-solid fa-basket-shopping text-citrus-400 text-lg group-hover:scale-110 transition-transform"></i>
+                        <span id="cartCountBadge" class="absolute -top-2.5 -right-2.5 bg-citrus-600 text-white text-[11px] font-extrabold rounded-full h-5 w-5 flex items-center justify-center shadow border border-white">
+                            0
+                        </span>
+                    </div>
+                    <span class="hidden sm:inline font-bold text-sm text-banana-400" id="cartTotalHeader">₡0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- BUSCADOR (MÓVIL DEBAJO DEL ENCABEZADO) -->
+        <div class="md:hidden px-4 pb-3 pt-1 border-t border-leaf-500/20">
+            <div class="relative w-full">
+                <input type="text" id="mobileSearchInput" oninput="handleSearch(this.value)" 
+                       placeholder="Buscar productos frescos y naturales..." 
+                       class="w-full bg-forest-950 text-cream-50 placeholder-leaf-400/70 text-xs rounded-full pl-9 pr-4 py-2 border border-leaf-500/40 focus:outline-none focus:border-citrus-500">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-citrus-400 text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <section class="relative bg-forest-900 text-white overflow-hidden py-12 lg:py-16 border-b-4 border-citrus-500">
+        <!-- Destellos decorativos inspirados en los tonos cítricos y hojas del logo -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-citrus-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-leaf-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Columna izquierda: Texto y llamadas a la acción -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-leaf-500/20 border border-leaf-400/40 text-leaf-400 text-xs font-bold uppercase tracking-wider mb-5">
+                        <i class="fa-solid fa-seedling text-banana-400"></i> Cosecha diaria en San Isidro, Alajuela
+                    </div>
+                    
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-5">
+                        Frutas y Verduras <br class="hidden sm:inline"/>
+                        <span class="fresh-gradient-text">Frescos y Naturales</span>
+                    </h1>
+                    
+                    <p class="text-cream-100/90 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 mb-7 font-normal leading-relaxed">
+                        En <strong class="text-banana-400">XMJ Frutería & Verdurería</strong> seleccionamos lo mejor del campo costarricense cada mañana. Catálogo completo con <strong>59 productos frescos y de temporada</strong> listos para retiro o envío a domicilio.
+                    </p>
+
+                    <!-- Botones CTA -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                        <a href="#catalogo" onclick="setCategory('Todos')" class="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-citrus-500 to-citrus-600 hover:from-citrus-600 hover:to-citrus-500 text-white font-extrabold rounded-full shadow-xl hover:shadow-citrus-500/30 transition-all duration-300 flex items-center justify-center gap-2.5 text-sm uppercase tracking-wide">
+                            <span>Ver Catálogo Completo</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                        <button onclick="openHolidayTab()" class="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-festive-red to-red-800 hover:from-red-700 hover:to-festive-red text-white border-2 border-festive-gold rounded-full font-extrabold transition-all text-center text-sm shadow-lg flex items-center justify-center gap-2">
+                            <span>🎄</span>
+                            <span>Temporada Navideña (14)</span>
+                        </button>
+                    </div>
+
+                    <!-- Indicadores de confianza -->
+                    <div class="mt-8 pt-6 border-t border-leaf-500/20 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-banana-400 font-extrabold text-xl sm:text-2xl">59</div>
+                            <div class="text-xs text-cream-100/80 font-medium">Productos Disponibles</div>
+                        </div>
+                        <div>
+                            <div class="text-citrus-400 font-extrabold text-xl sm:text-2xl">SINPE</div>
+                            <div class="text-xs text-cream-100/80 font-medium">Al 7086-1827</div>
+                        </div>
+                        <div>
+                            <div class="text-leaf-400 font-extrabold text-xl sm:text-2xl">Alajuela</div>
+                            <div class="text-xs text-cream-100/80 font-medium">Retiro o Envío</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Tarjeta destacada con el Logo Oficial XMJ -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="relative rounded-3xl overflow-hidden border-4 border-citrus-500/60 shadow-2xl bg-forest-800">
+                            <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="XMJ Frutería & Verdurería - Productos Frescos" 
+                                 class="w-full h-72 sm:h-80 object-cover hover:scale-105 transition-transform duration-700"
+                                 onerror="this.src='https://placehold.co/800x600/1E4620/FBC02D?text=XMJ+Fruteria+y+Verdureria'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/20 to-transparent"></div>
+                            
+                            <!-- Insignia flotante con el Logo Oficial XMJ -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-cream-50/95 backdrop-blur-md p-3.5 rounded-2xl border-2 border-forest-900 shadow-xl flex items-center gap-3.5">
+                                <div class="w-16 h-16 rounded-full xmj-logo-frame border-2 border-forest-900 ring-2 ring-citrus-500 shrink-0 shadow p-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-full h-full">
+                                        <circle cx="100" cy="100" r="95" fill="#F7F6F2" stroke="#1E4620" stroke-width="6"/>
+                                        <path d="M58 72 Q48 48 70 46 Q84 46 86 68 Q74 82 58 72 Z" fill="#7CB342" stroke="#1E4620" stroke-width="3.5"/>
+                                        <path d="M100 66 Q94 40 112 38 Q126 42 120 66 Q110 76 100 66 Z" fill="#4CAF50" stroke="#1E4620" stroke-width="3.5"/>
+                                        <circle cx="82" cy="66" r="14" fill="#FF9800" stroke="#1E4620" stroke-width="3.5"/>
+                                        <path d="M86 78 Q104 74 108 46 Q117 58 106 80 Q94 88 86 78 Z" fill="#FBC02D" stroke="#1E4620" stroke-width="3.5"/>
+                                        <path d="M112 78 L134 54 L141 61 L119 84 Z" fill="#F57C00" stroke="#1E4620" stroke-width="3.5"/>
+                                        <circle cx="136" cy="75" r="10.5" fill="#E53935" stroke="#1E4620" stroke-width="3.5"/>
+                                        <text x="100" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="45" fill="#4CAF50" stroke="#1E4620" stroke-width="3.2">XMJ</text>
+                                        <text x="100" y="141" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="11.2" fill="#1E4620">FRUTERÍA &amp; VERDURERÍA</text>
+                                        <text x="100" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="8.8" fill="#F57C00">FRESCOS Y NATURALES</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-extrabold text-forest-900 leading-tight">XMJ Frutería & Verdurería</h4>
+                                    <p class="text-xs text-citrus-600 font-bold mt-0.5">Frescos y Naturales 🇨🇷</p>
+                                    <p class="text-[11px] text-slate-600">San Isidro, Alajuela • 7086-1827</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO PRINCIPAL Y FILTROS -->
+    <main id="catalogo" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        
+        <!-- TÍTULO DE SECCIÓN -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b-2 border-leaf-500/20 pb-4">
+            <div>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-citrus-600 flex items-center gap-1.5">
+                    <i class="fa-solid fa-leaf text-leaf-600"></i> Nuestra Cosecha Oficial
+                </span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-extrabold text-forest-900 mt-1">Catálogo Frescos y Naturales</h2>
+            </div>
+            <div class="flex flex-col sm:items-end gap-1">
+                <span id="catalogCounterBadge" class="inline-flex items-center gap-1.5 bg-pastel-mint border border-leaf-500/40 text-forest-900 text-xs font-extrabold px-3 py-1 rounded-full w-fit">
+                    Mostrando 59 de 59 productos
+                </span>
+                <p class="text-slate-600 text-xs">
+                    Precios en colones (₡). Elija la cantidad y agregue a su canasta.
+                </p>
+            </div>
+        </div>
+
+        <!-- BARRA DE CATEGORÍAS Y FILTRO RÁPIDO -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-6 bg-white p-4 rounded-2xl shadow-sm border border-leaf-500/25">
+            
+            <!-- Pestañas de Categoría con Contadores Dinámicos -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0" id="categoryContainer">
+                <!-- Renderizado por JavaScript -->
+            </div>
+
+            <!-- Filtro en vivo dentro del catálogo -->
+            <div class="relative min-w-[250px]">
+                <input type="text" id="catalogSearchInput" oninput="handleSearch(this.value)" 
+                       placeholder="Filtrar por nombre o categoría..." 
+                       class="w-full bg-cream-50 text-slate-800 placeholder-slate-400 text-xs rounded-xl pl-9 pr-8 py-2.5 border border-slate-200 focus:outline-none focus:border-forest-900 focus:bg-white transition-all">
+                <i class="fa-solid fa-filter absolute left-3 top-3 text-citrus-600 text-xs"></i>
+                <button id="clearSearchBtn" onclick="resetFilters()" class="hidden absolute right-2.5 top-2.5 text-slate-400 hover:text-forest-900 text-xs" title="Limpiar filtro">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- BANNER PROMOCIONAL NAVIDEÑO (VISIBLE AL SELECCIONAR TEMPORADA NAVIDEÑA) -->
+        <div id="holidayBanner" class="hidden mb-8 rounded-3xl bg-gradient-to-r from-forest-900 via-red-900 to-festive-red text-white p-6 sm:p-8 border-2 border-festive-gold shadow-xl relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 text-8xl opacity-15 pointer-events-none select-none">🎄</div>
+            <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-festive-gold/20 border border-festive-gold text-banana-400 text-xs font-extrabold uppercase tracking-wider mb-2">
+                        <span>✨ Edición Especial de Fin de Año ✨</span>
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white">
+                        Colección <span class="text-banana-400">Temporada Navideña</span> XMJ
+                    </h3>
+                    <p class="text-xs sm:text-sm text-cream-100/90 mt-1.5 max-w-2xl leading-relaxed">
+                        Manzanas importadas Premium, Peras D' Anjou, Uvas frescas a granel y en bandeja, Melocotón en almíbar, Mixto de frutas y Arándanos frescos. Alterne entre <strong>Por Kilo</strong> o <strong>Por Unidad</strong> directamente en cada tarjeta.
+                    </p>
+                </div>
+                <div class="shrink-0 bg-forest-950/60 backdrop-blur-sm border border-festive-gold/50 rounded-2xl px-4 py-3 text-xs">
+                    <div class="text-banana-400 font-extrabold flex items-center gap-1.5">
+                        <i class="fa-solid fa-gift"></i> Pedidos Navideños Directos
+                    </div>
+                    <div class="text-cream-100 mt-0.5">SINPE & WhatsApp: <strong>7086-1827</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CUADRÍCULA DE PRODUCTOS (59 PRODUCTOS: 45 REGULARES + 14 NAVIDEÑOS) -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Renderizado inmediatamente por JavaScript -->
+        </div>
+
+        <!-- MENSAJE DE SIN RESULTADOS -->
+        <div id="noResults" class="hidden text-center py-16 bg-white rounded-3xl border-2 border-dashed border-leaf-500/40">
+            <i class="fa-solid fa-carrot text-5xl text-citrus-400 mb-4"></i>
+            <h3 class="text-lg font-extrabold text-forest-900">No encontramos productos coincidentes</h3>
+            <p class="text-sm text-slate-500 mt-1">Intente buscar con otro nombre o restablezca los filtros para ver los 59 productos.</p>
+            <button onclick="resetFilters()" class="mt-4 px-5 py-2.5 bg-forest-900 text-banana-400 text-xs font-bold rounded-full hover:bg-forest-800 transition-colors shadow">
+                Ver Todos los Productos (59)
+            </button>
+        </div>
+
+    </main>
+
+    <!-- SECCIÓN: ¿CÓMO FUNCIONA? / INFORMACIÓN DE PAGO -->
+    <section id="como-funciona" class="bg-forest-900 text-cream-50 py-14 border-t-4 border-citrus-500 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-banana-400 text-xs font-extrabold uppercase tracking-wider">Fácil y Rápido</span>
+                <h2 class="font-serif text-3xl font-extrabold text-white mt-1">¿Cómo hacer su pedido en XMJ?</h2>
+                <p class="text-cream-100/80 text-sm mt-2">Arme su canasta en segundos y envíe su orden lista a nuestro WhatsApp en Alajuela.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Paso 1 -->
+                <div class="bg-forest-800/90 p-6 rounded-3xl border border-leaf-400/30 relative flex flex-col items-center text-center shadow-lg">
+                    <div class="w-12 h-12 bg-citrus-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl mb-4 shadow-md border-2 border-banana-400">
+                        1
+                    </div>
+                    <h3 class="font-bold text-banana-400 text-lg mb-2">Elija sus Frescos</h3>
+                    <p class="text-xs text-cream-100/90 leading-relaxed">Seleccione sus frutas, verduras, hortalizas, hierbas o productos navideños y agréguelos al carrito.</p>
+                </div>
+                <!-- Paso 2 -->
+                <div class="bg-forest-800/90 p-6 rounded-3xl border border-leaf-400/30 relative flex flex-col items-center text-center shadow-lg">
+                    <div class="w-12 h-12 bg-citrus-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl mb-4 shadow-md border-2 border-banana-400">
+                        2
+                    </div>
+                    <h3 class="font-bold text-banana-400 text-lg mb-2">Retiro o Envío</h3>
+                    <p class="text-xs text-cream-100/90 leading-relaxed">Elija retiro gratis en San Isidro de Alajuela o envío a domicilio (con costo adicional según zona) y pago por SINPE 7086-1827 o efectivo.</p>
+                </div>
+                <!-- Paso 3 -->
+                <div class="bg-forest-800/90 p-6 rounded-3xl border border-leaf-400/30 relative flex flex-col items-center text-center shadow-lg">
+                    <div class="w-12 h-12 bg-citrus-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl mb-4 shadow-md border-2 border-banana-400">
+                        3
+                    </div>
+                    <h3 class="font-bold text-banana-400 text-lg mb-2">Envíe por WhatsApp</h3>
+                    <p class="text-xs text-cream-100/90 leading-relaxed">Con un solo clic se abrirá WhatsApp al 7086-1827 con su pedido detallado listo para coordinar la entrega.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-forest-950 text-cream-100/80 border-t border-leaf-500/20 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-3.5 mb-4">
+                    <div class="w-16 h-16 rounded-full xmj-logo-frame border-2 border-forest-700 ring-2 ring-citrus-500 shadow-md p-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-full h-full">
+                            <circle cx="100" cy="100" r="95" fill="#F7F6F2" stroke="#1E4620" stroke-width="6"/>
+                            <path d="M58 72 Q48 48 70 46 Q84 46 86 68 Q74 82 58 72 Z" fill="#7CB342" stroke="#1E4620" stroke-width="3.5"/>
+                            <path d="M100 66 Q94 40 112 38 Q126 42 120 66 Q110 76 100 66 Z" fill="#4CAF50" stroke="#1E4620" stroke-width="3.5"/>
+                            <circle cx="82" cy="66" r="14" fill="#FF9800" stroke="#1E4620" stroke-width="3.5"/>
+                            <path d="M86 78 Q104 74 108 46 Q117 58 106 80 Q94 88 86 78 Z" fill="#FBC02D" stroke="#1E4620" stroke-width="3.5"/>
+                            <path d="M112 78 L134 54 L141 61 L119 84 Z" fill="#F57C00" stroke="#1E4620" stroke-width="3.5"/>
+                            <circle cx="136" cy="75" r="10.5" fill="#E53935" stroke="#1E4620" stroke-width="3.5"/>
+                            <text x="100" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="45" fill="#4CAF50" stroke="#1E4620" stroke-width="3.2">XMJ</text>
+                            <text x="100" y="141" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="11.2" fill="#1E4620">FRUTERÍA &amp; VERDURERÍA</text>
+                            <text x="100" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="8.8" fill="#F57C00">FRESCOS Y NATURALES</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-serif font-extrabold text-xl text-white block leading-tight">XMJ Frutería & Verdurería</span>
+                        <span class="text-[11px] uppercase text-citrus-400 font-bold tracking-wider">Frescos y Naturales</span>
+                    </div>
+                </div>
+                <p class="text-cream-100/70 leading-relaxed mb-4 max-w-sm">
+                    Comprometidos con llevar frescura, sabor natural y calidad superior del campo costarricense directo a su mesa en San Isidro y todo Alajuela.
+                </p>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/50670861827" target="_blank" class="w-9 h-9 rounded-full bg-forest-800 flex items-center justify-center text-banana-400 hover:bg-citrus-500 hover:text-white transition-colors border border-leaf-500/30"><i class="fa-brands fa-whatsapp text-base"></i></a>
+                    <a href="#catalogo" class="w-9 h-9 rounded-full bg-forest-800 flex items-center justify-center text-banana-400 hover:bg-citrus-500 hover:text-white transition-colors border border-leaf-500/30"><i class="fa-solid fa-basket-shopping"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-banana-400 uppercase tracking-wider mb-3">Horario de Atención</h4>
+                <ul class="space-y-2 text-cream-100/80">
+                    <li>Lunes a Viernes: 6:30 am - 7:00 pm</li>
+                    <li>Sábados: 6:00 am - 5:00 pm</li>
+                    <li>Domingos: Cerrado (Cosecha fresca)</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-banana-400 uppercase tracking-wider mb-3">Contacto & Ubicación</h4>
+                <ul class="space-y-2 text-cream-100/80">
+                    <li><i class="fa-solid fa-phone text-citrus-400 mr-2"></i> +506 7086-1827</li>
+                    <li><i class="fa-brands fa-whatsapp text-leaf-400 mr-2"></i> WhatsApp: 7086-1827</li>
+                    <li><i class="fa-solid fa-money-bill-transfer text-citrus-400 mr-2"></i> SINPE Móvil: 7086-1827</li>
+                    <li><i class="fa-solid fa-location-dot text-citrus-400 mr-2"></i> San Isidro, Alajuela, Costa Rica</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-forest-800 text-center flex flex-col sm:flex-row justify-between items-center text-cream-100/60 gap-4">
+            <p>© 2026 XMJ Frutería & Verdurería. Todos los precios en Colones (₡).</p>
+            <p class="text-leaf-400 font-semibold">Frescos y Naturales • San Isidro, Alajuela 🇨🇷</p>
+        </div>
+    </footer>
+
+
+    <!-- CARRITO DESPLEGABLE (SLIDE-OVER DRAWER) -->
+    <div id="cartDrawerBackdrop" class="fixed inset-0 bg-forest-950/60 backdrop-blur-sm z-50 hidden transition-opacity opacity-0" onclick="toggleCartDrawer()"></div>
+    
+    <aside id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-cream-50 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        
+        <!-- Encabezado del Carrito -->
+        <div class="bg-forest-900 text-white p-5 flex items-center justify-between border-b-2 border-citrus-500">
+            <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-basket-shopping text-citrus-400 text-xl"></i>
+                <div>
+                    <h3 class="font-bold text-base leading-none">Mi Canasta XMJ</h3>
+                    <span class="text-[11px] text-leaf-400">Frescos y Naturales</span>
+                </div>
+            </div>
+            <button onclick="toggleCartDrawer()" class="text-cream-100/70 hover:text-white p-1 transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Lista de Productos en el Carrito -->
+        <div class="flex-1 overflow-y-auto p-4 space-y-3" id="cartItemsContainer">
+            <!-- Generado por JavaScript -->
+        </div>
+
+        <!-- Pie del Carrito (Modalidad Retiro/Envío, Resumen y Formulario WhatsApp) -->
+        <div class="border-t-2 border-leaf-500/20 p-5 bg-white space-y-3.5 shadow-inner overflow-y-auto max-h-[68vh]">
+            
+            <!-- Selector Interactivo de Modalidad de Entrega -->
+            <div>
+                <label class="block text-xs font-extrabold text-forest-900 mb-1.5">Modalidad de Entrega *</label>
+                <div class="grid grid-cols-2 gap-2 p-1 bg-cream-50 rounded-2xl border border-forest-900/15">
+                    <button type="button" id="btnDeliveryPickup" onclick="setDeliveryMethod('pickup')" 
+                            class="py-2.5 px-3 rounded-xl text-xs font-extrabold transition-all flex items-center justify-center gap-1.5 bg-forest-900 text-banana-400 shadow">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Retiro en Local</span>
+                    </button>
+                    <button type="button" id="btnDeliveryHome" onclick="setDeliveryMethod('delivery')" 
+                            class="py-2.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 text-forest-900 hover:bg-pastel-mint">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Envío a Domicilio</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Aviso Informativo de Retiro en Local -->
+            <div id="pickupInfoBanner" class="bg-pastel-mint border border-leaf-500/40 rounded-2xl p-3 flex items-start gap-2.5 text-xs text-forest-900">
+                <i class="fa-solid fa-circle-check text-leaf-600 text-sm mt-0.5 shrink-0"></i>
+                <div>
+                    <span class="font-extrabold block">Retiro sin costo en San Isidro, Alajuela (₡0)</span>
+                    <span class="text-[11px] text-slate-600">Preparamos tu canasta fresca para que la retires directamente en nuestro local.</span>
+                </div>
+            </div>
+
+            <!-- Aviso Informativo de Costo Adicional por Envío -->
+            <div id="deliveryFeeBanner" class="hidden bg-pastel-peach border-2 border-citrus-500/60 rounded-2xl p-3 flex items-start gap-2.5 text-xs text-forest-900 shadow-sm">
+                <i class="fa-solid fa-circle-info text-citrus-600 text-base mt-0.5 shrink-0"></i>
+                <div>
+                    <span class="font-extrabold text-citrus-600 block">Aviso Importante de Envío a Domicilio:</span>
+                    <p class="text-[11px] text-slate-700 leading-relaxed mt-0.5">
+                        El envío a domicilio conlleva un <strong>costo adicional según la zona de entrega</strong>, el cual se confirmará por WhatsApp antes de despachar tu pedido.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resumen de Precios -->
+            <div class="space-y-1.5 text-xs text-slate-600 bg-cream-50/70 p-3 rounded-2xl border border-slate-200/80">
+                <div class="flex justify-between">
+                    <span>Subtotal de productos:</span>
+                    <span class="font-bold text-slate-800" id="cartSubtotalText">₡0</span>
+                </div>
+                <div class="flex justify-between items-center gap-2">
+                    <span>Envío:</span>
+                    <span id="shippingCostText" class="text-leaf-600 font-extrabold text-right">Gratis (Retiro en local - ₡0)</span>
+                </div>
+                <div class="flex justify-between items-baseline text-base font-extrabold text-forest-900 pt-2 border-t border-slate-200">
+                    <span id="cartTotalLabel">Total a pagar:</span>
+                    <span class="text-citrus-600" id="cartTotalText">₡0</span>
+                </div>
+                <p id="cartTotalNote" class="hidden text-[10px] text-citrus-600 font-bold text-right">
+                    * Productos + costo adicional de envío por confirmar
+                </p>
+            </div>
+
+            <!-- Campos del Cliente -->
+            <div class="space-y-2.5 pt-0.5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-xs font-bold text-forest-900 mb-1">Nombre Completo *</label>
+                        <input type="text" id="custName" placeholder="Ej: María Rodríguez" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-forest-900 bg-cream-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-forest-900 mb-1">Método de Pago *</label>
+                        <select id="custPayment" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-forest-900 bg-cream-50">
+                            <option value="SINPE Móvil (7086-1827)">SINPE Móvil (7086-1827)</option>
+                            <option value="Efectivo">Efectivo</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Campos exclusivos para Envío a Domicilio -->
+                <div id="deliveryFieldsContainer" class="hidden space-y-2.5">
+                    <div>
+                        <label class="block text-xs font-bold text-forest-900 mb-1">Cantón / Zona de Entrega *</label>
+                        <select id="custLocation" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-forest-900 bg-cream-50">
+                            <option value="San Isidro de Alajuela">San Isidro de Alajuela</option>
+                            <option value="Alajuela Centro">Alajuela Centro</option>
+                            <option value="Sabanilla / Fraijanes">Sabanilla / Fraijanes</option>
+                            <option value="Tambor / Itiquís">Tambor / Itiquís</option>
+                            <option value="Carrizal / San Pedro">Carrizal / San Pedro</option>
+                            <option value="Otra zona de Alajuela">Otra zona de Alajuela</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-forest-900 mb-1">Dirección Exacta de Entrega *</label>
+                        <textarea id="custAddress" rows="2" placeholder="Ej: San Isidro de Alajuela, 200m norte de la iglesia, casa color crema." class="w-full text-xs p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-forest-900 bg-cream-50 resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Enviar a WhatsApp -->
+            <button onclick="sendOrderToWhatsApp()" class="w-full py-3.5 bg-gradient-to-r from-leaf-600 to-forest-800 hover:from-leaf-500 hover:to-forest-700 text-white font-extrabold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm border border-leaf-400/40">
+                <i class="fa-brands fa-whatsapp text-lg text-banana-400"></i>
+                <span>Enviar Pedido a WhatsApp</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- NOTIFICACIÓN FLOTANTE (TOAST) -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-forest-900 text-white px-5 py-3 rounded-full shadow-2xl border-2 border-citrus-500 z-50 flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-banana-400 text-lg"></i>
+        <span id="toastMessage" class="text-xs sm:text-sm font-semibold">Producto agregado al carrito</span>
+    </div>
+
+
+    <!-- LÓGICA JAVASCRIPT DE LA TIENDA XMJ -->
+    <script>
+        // Configuración de la Tienda XMJ Frutería & Verdurería
+        const STORE_CONFIG = {
+            whatsappNumber: "50670861827",
+            currencySymbol: "₡"
+        };
+
+        // Catálogo Oficial Completo (45 Productos Regulares + 14 Productos Temporada Navideña = 59 Productos)
+        const PRODUCTS = [
+            // --- 45 PRODUCTOS REGULARES EXACTOS ---
+            {
+                id: 1,
+                name: "Apio verde (mata)",
+                category: "hierbas",
+                price: 2100,
+                unit: "Mata",
+                tag: "Fresco",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 2,
+                name: "Ayote sazón",
+                category: "verduras",
+                price: 490,
+                unit: "Kilo",
+                tag: "Criollo",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1570586437263-ab629fccc818?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 3,
+                name: "Banano maduro criollo",
+                category: "frutas",
+                price: 50,
+                unit: "Unidad",
+                tag: "Dulce",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 4,
+                name: "Brócoli",
+                category: "hortalizas",
+                price: 1820,
+                unit: "Kilo",
+                tag: "Calidad Top",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1459411621453-7b03166349b9?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                name: "Camote",
+                category: "verduras",
+                price: 1820,
+                unit: "Kilo",
+                tag: "Nutritivo",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 6,
+                name: "Cebolla seca amarilla bur",
+                category: "hortalizas",
+                price: 1400,
+                unit: "Kilo",
+                tag: "Esencial",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 7,
+                name: "Cebolla seca morada",
+                category: "hortalizas",
+                price: 1680,
+                unit: "Kilo",
+                tag: "Sabor Intenso",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 8,
+                name: "Chayote tierno criollo",
+                category: "verduras",
+                price: 235,
+                unit: "Java",
+                tag: "Oportunidad",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 9,
+                name: "Chayote tierno quelite",
+                category: "verduras",
+                price: 190,
+                unit: "Java",
+                tag: "Súper Oferta",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-leaf-600 text-white",
+                image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 10,
+                name: "Chile dulce jumbo",
+                category: "hortalizas",
+                price: 900,
+                unit: "Unidad",
+                tag: "Jumbo Extra",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 11,
+                name: "Chile dulce primera",
+                category: "hortalizas",
+                price: 600,
+                unit: "Unidad",
+                tag: "Primera",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 12,
+                name: "Chile dulce segunda",
+                category: "hortalizas",
+                price: 450,
+                unit: "Unidad",
+                tag: "Económico",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-white",
+                image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 13,
+                name: "Coliflor",
+                category: "hortalizas",
+                price: 2800,
+                unit: "Unidad",
+                tag: "Firme y Blanca",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 14,
+                name: "Culantro castilla",
+                category: "hierbas",
+                price: 175,
+                unit: "Rollo",
+                tag: "Muy Oloroso",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1588879460418-422f254f164b?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 15,
+                name: "Elote",
+                category: "verduras",
+                price: 225,
+                unit: "Unidad",
+                tag: "Tierno",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 16,
+                name: "Jengibre sazón",
+                category: "verduras",
+                price: 1400,
+                unit: "Kilo",
+                tag: "Natural",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 17,
+                name: "Lechuga Americana",
+                category: "hortalizas",
+                price: 500,
+                unit: "Unidad",
+                tag: "Crujiente",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 18,
+                name: "Limón mandarina",
+                category: "frutas",
+                price: 100,
+                unit: "Unidad",
+                tag: "Jugoso",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1534531173927-aeb928d54385?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 19,
+                name: "Limón mesino",
+                category: "frutas",
+                price: 150,
+                unit: "Unidad",
+                tag: "Ácido Ideal",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-leaf-600 text-white",
+                image: "https://images.unsplash.com/photo-1534531173927-aeb928d54385?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 20,
+                name: "Mandarina primera",
+                category: "frutas",
+                price: 350,
+                unit: "Unidad",
+                tag: "Dulce",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 21,
+                name: "Manga grande Cavallini",
+                category: "frutas",
+                price: 2100,
+                unit: "Kilo",
+                tag: "Cavallini",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 22,
+                name: "Manga grande Keitt",
+                category: "frutas",
+                price: 2350,
+                unit: "Kilo",
+                tag: "Keitt Premium",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 23,
+                name: "Melón Cantaloupe",
+                category: "frutas",
+                price: 1275,
+                unit: "Kilo",
+                tag: "Refrescante",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 24,
+                name: "Naranja dulce",
+                category: "frutas",
+                price: 175,
+                unit: "Unidad",
+                tag: "Jugo Natural",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 25,
+                name: "Ñampí",
+                category: "verduras",
+                price: 1400,
+                unit: "Kilo",
+                tag: "Auténtico Tico",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 26,
+                name: "Papa amarilla primera",
+                category: "verduras",
+                price: 725,
+                unit: "Kilo",
+                tag: "Primera",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 27,
+                name: "Papa blanca primera",
+                category: "verduras",
+                price: 800,
+                unit: "Kilo",
+                tag: "Cosecha Local",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 28,
+                name: "Papaya híbrida",
+                category: "frutas",
+                price: 1260,
+                unit: "Kilo",
+                tag: "Dulce Madura",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 29,
+                name: "Pepino",
+                category: "hortalizas",
+                price: 490,
+                unit: "Kilo",
+                tag: "Frescura",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 30,
+                name: "Piña - grande",
+                category: "frutas",
+                price: 1400,
+                unit: "Unidad",
+                tag: "Sweet Grande",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 31,
+                name: "Piña - mediana",
+                category: "frutas",
+                price: 1120,
+                unit: "Unidad",
+                tag: "Sweet Mediana",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 32,
+                name: "Piña - pequeña",
+                category: "frutas",
+                price: 1000,
+                unit: "Unidad",
+                tag: "Sweet Pequeña",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-forest-800 text-banana-400",
+                image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 33,
+                name: "Plátano maduro",
+                category: "frutas",
+                price: 350,
+                unit: "Unidad",
+                tag: "Para Freír",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 34,
+                name: "Plátano verde",
+                category: "frutas",
+                price: 350,
+                unit: "Unidad",
+                tag: "Para Patacones",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 35,
+                name: "Remolacha",
+                category: "verduras",
+                price: 700,
+                unit: "Unidad",
+                tag: "Saludable",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 36,
+                name: "Repollo morado",
+                category: "hortalizas",
+                price: 2800,
+                unit: "Kilo",
+                tag: "Crujiente",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1598170845058-12ef4a457539?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 37,
+                name: "Repollo verde",
+                category: "hortalizas",
+                price: 850,
+                unit: "Kilo",
+                tag: "Fresco",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1598170845058-12ef4a457539?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 38,
+                name: "Sandía",
+                category: "frutas",
+                price: 775,
+                unit: "Kilo",
+                tag: "Roja y Dulce",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 39,
+                name: "Tiquisque",
+                category: "verduras",
+                price: 3250,
+                unit: "Kilo",
+                tag: "Especial Olla",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 40,
+                name: "Tomate primera",
+                category: "frutas",
+                price: 1500,
+                unit: "Kilo",
+                tag: "Primera",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 41,
+                name: "Tomate segunda",
+                category: "frutas",
+                price: 1350,
+                unit: "Kilo",
+                tag: "Económico",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-forest-800 text-white",
+                image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 42,
+                name: "Vainica",
+                category: "verduras",
+                price: 1000,
+                unit: "Kilo",
+                tag: "Tierna",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 43,
+                name: "Yuca parafinada",
+                category: "verduras",
+                price: 575,
+                unit: "Kilo",
+                tag: "Suave",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-white",
+                image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 44,
+                name: "Zanahoria primera",
+                category: "verduras",
+                price: 1200,
+                unit: "Malla (45 kg)",
+                tag: "Malla 45kg",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-citrus-600 text-white",
+                image: "https://images.unsplash.com/photo-1598170845058-12ef4a457539?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 45,
+                name: "Zucchini",
+                category: "verduras",
+                price: 425,
+                unit: "Unidad",
+                tag: "Verde Tierno",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400",
+                image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // --- 14 PRODUCTOS DE TEMPORADA NAVIDEÑA EXACTOS ---
+            {
+                id: 46,
+                name: "Manzana Roja Premium",
+                category: "navidad",
+                isHoliday: true,
+                price: 3100,
+                unit: "Kilo",
+                kiloPrice: 3100,
+                unitPrice: 458,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-festive",
+                badgeColor: "bg-festive-red text-white border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 47,
+                name: "Manzana Granny Smith",
+                category: "navidad",
+                isHoliday: true,
+                price: 3100,
+                unit: "Kilo",
+                kiloPrice: 3100,
+                unitPrice: 504,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1584306670957-acf935f5033c?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 48,
+                name: "Manzana Golden",
+                category: "navidad",
+                isHoliday: true,
+                price: 3219,
+                unit: "Kilo",
+                kiloPrice: 3219,
+                unitPrice: 523,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-festive-red text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1579613832125-5d34a13ffe2a?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 49,
+                name: "Manzana Gala",
+                category: "navidad",
+                isHoliday: true,
+                price: 3100,
+                unit: "Kilo",
+                kiloPrice: 3100,
+                unitPrice: 504,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-festive",
+                badgeColor: "bg-festive-red text-white border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 50,
+                name: "Pera D' Anjou",
+                category: "navidad",
+                isHoliday: true,
+                price: 3338,
+                unit: "Kilo",
+                kiloPrice: 3338,
+                unitPrice: 482,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-lime",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 51,
+                name: "Uva Globo Premium",
+                category: "navidad",
+                isHoliday: true,
+                price: 3780,
+                unit: "Kilo",
+                kiloPrice: 3780,
+                unitPrice: null,
+                tag: "🎄 Granel / Kg",
+                bgColor: "bg-pastel-festive",
+                badgeColor: "bg-festive-red text-white border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 52,
+                name: "Uva Negra",
+                category: "navidad",
+                isHoliday: true,
+                price: 5293,
+                unit: "Kilo",
+                kiloPrice: 5293,
+                unitPrice: null,
+                tag: "🎄 Granel / Kg",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1596363505729-4190a9506133?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 53,
+                name: "Uva Verde",
+                category: "navidad",
+                isHoliday: true,
+                price: 5293,
+                unit: "Kilo",
+                kiloPrice: 5293,
+                unitPrice: null,
+                tag: "🎄 Granel / Kg",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1599819177626-b50f9dd21c9b?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 54,
+                name: "Uva Globo (Bandeja)",
+                category: "navidad",
+                isHoliday: true,
+                price: 4495,
+                unit: "Kilo",
+                kiloPrice: 4495,
+                unitPrice: null,
+                tag: "🎄 Bandeja / Kg",
+                bgColor: "bg-pastel-festive",
+                badgeColor: "bg-festive-red text-white border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 55,
+                name: "Uva Negra (Bandeja)",
+                category: "navidad",
+                isHoliday: true,
+                price: 6045,
+                unit: "Kilo",
+                kiloPrice: 6045,
+                unitPrice: null,
+                tag: "🎄 Bandeja / Kg",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1596363505729-4190a9506133?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 56,
+                name: "Uva Verde (Bandeja)",
+                category: "navidad",
+                isHoliday: true,
+                price: 6045,
+                unit: "Kilo",
+                kiloPrice: 6045,
+                unitPrice: null,
+                tag: "🎄 Bandeja / Kg",
+                bgColor: "bg-pastel-mint",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1599819177626-b50f9dd21c9b?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 57,
+                name: "Mixto de Frutas (Coctel)",
+                category: "navidad",
+                isHoliday: true,
+                price: 2646,
+                unit: "Kilo",
+                kiloPrice: 2646,
+                unitPrice: 2170,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-peach",
+                badgeColor: "bg-festive-red text-white border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 58,
+                name: "Melocotón en Almíbar",
+                category: "navidad",
+                isHoliday: true,
+                price: 2457,
+                unit: "Kilo",
+                kiloPrice: 2457,
+                unitPrice: 2015,
+                tag: "🎄 Navideño",
+                bgColor: "bg-pastel-yellow",
+                badgeColor: "bg-festive-red text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1629828874514-c1e5103f2150?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 59,
+                name: "Arándanos Frescos",
+                category: "navidad",
+                isHoliday: true,
+                price: 16120,
+                unit: "Kilo",
+                kiloPrice: 16120,
+                unitPrice: 2015,
+                tag: "🎄 Gourmet",
+                bgColor: "bg-pastel-festive",
+                badgeColor: "bg-forest-900 text-banana-400 border border-festive-gold",
+                image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        // Definición de Pestañas de Categoría
+        const CATEGORY_TABS = [
+            { key: "Todos", label: "Todos" },
+            { key: "navidad", label: "🎄 Temporada Navideña" },
+            { key: "verduras", label: "Verduras" },
+            { key: "frutas", label: "Frutas" },
+            { key: "hortalizas", label: "Hortalizas" },
+            { key: "hierbas", label: "Hierbas" }
+        ];
+
+        // Estado de la Aplicación
+        let cart = [];
+        let selectedCategory = "Todos";
+        let searchQuery = "";
+        let selectedModes = {}; // Guarda 'Kilo' o 'Unidad' para productos navideños con doble precio
+        let deliveryMethod = "pickup"; // 'pickup' (Retiro en Local) o 'delivery' (Envío a Domicilio)
+
+        // Formatear Moneda en Colones (₡)
+        function formatCRC(amount) {
+            return `${STORE_CONFIG.currencySymbol}${Number(amount).toLocaleString('es-CR')}`;
+        }
+
+        // Obtener etiqueta legible de categoría
+        function getCategoryLabel(catKey) {
+            const map = {
+                navidad: "Temporada Navideña",
+                verduras: "Verduras",
+                frutas: "Frutas",
+                hortalizas: "Hortalizas",
+                hierbas: "Hierbas"
+            };
+            return map[catKey] || catKey;
+        }
+
+        // Renderizar Botones de Categoría con Conteo Exacto
+        function renderCategories() {
+            const container = document.getElementById('categoryContainer');
+            if (!container) return;
+
+            container.innerHTML = CATEGORY_TABS.map(tab => {
+                const count = tab.key === "Todos"
+                    ? PRODUCTS.length
+                    : PRODUCTS.filter(p => p.category === tab.key).length;
+
+                const isActive = selectedCategory === tab.key;
+                const isHolidayTab = tab.key === "navidad";
+
+                let classes = "";
+                if (isHolidayTab) {
+                    classes = isActive
+                        ? "bg-gradient-to-r from-festive-red to-red-800 text-white border-2 border-festive-gold shadow-md scale-[1.02]"
+                        : "bg-pastel-festive text-festive-red border border-festive-red/30 hover:bg-red-100";
+                } else {
+                    classes = isActive
+                        ? "bg-forest-900 text-banana-400 border-2 border-forest-900 shadow-md"
+                        : "bg-cream-50 text-forest-900 border border-leaf-500/30 hover:bg-pastel-mint";
+                }
+
+                return `
+                    <button type="button" onclick="setCategory('${tab.key}')" 
+                            class="px-4 py-2 rounded-full text-xs font-extrabold whitespace-nowrap transition-all flex items-center gap-1.5 ${classes}">
+                        <span>${tab.label}</span>
+                        <span class="px-1.5 py-0.5 rounded-full text-[10px] ${isActive ? 'bg-white/20 text-white' : 'bg-black/5 text-slate-700'}">
+                            ${count}
+                        </span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        // Cambiar Categoría Activa
+        function setCategory(catKey) {
+            selectedCategory = catKey;
+            const holidayBanner = document.getElementById('holidayBanner');
+            if (holidayBanner) {
+                if (catKey === "navidad") {
+                    holidayBanner.classList.remove('hidden');
+                } else {
+                    holidayBanner.classList.add('hidden');
+                }
+            }
+            renderCategories();
+            renderProducts();
+        }
+
+        // Abrir Pestaña de Temporada Navideña con desplazamiento suave
+        function openHolidayTab() {
+            setCategory("navidad");
+            const catalogEl = document.getElementById('catalogo');
+            if (catalogEl) {
+                catalogEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Búsqueda en tiempo real sincronizada en todos los inputs
+        function handleSearch(val) {
+            searchQuery = val.trim().toLowerCase();
+            const inputs = ['headerSearchInput', 'mobileSearchInput', 'catalogSearchInput'];
+            inputs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && el.value !== val) {
+                    el.value = val;
+                }
+            });
+
+            const clearBtn = document.getElementById('clearSearchBtn');
+            if (clearBtn) {
+                if (searchQuery.length > 0) {
+                    clearBtn.classList.remove('hidden');
+                } else {
+                    clearBtn.classList.add('hidden');
+                }
+            }
+
+            renderProducts();
+        }
+
+        // Restablecer filtros
+        function resetFilters() {
+            selectedCategory = "Todos";
+            searchQuery = "";
+            ['headerSearchInput', 'mobileSearchInput', 'catalogSearchInput'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = "";
+            });
+            const clearBtn = document.getElementById('clearSearchBtn');
+            if (clearBtn) clearBtn.classList.add('hidden');
+
+            const holidayBanner = document.getElementById('holidayBanner');
+            if (holidayBanner) holidayBanner.classList.add('hidden');
+
+            renderCategories();
+            renderProducts();
+        }
+
+        // Cambiar modalidad Kilo / Unidad en productos navideños
+        function setProductMode(productId, mode) {
+            selectedModes[productId] = mode;
+            renderProducts();
+        }
+
+        // Ajustar cantidad en la tarjeta de producto antes de agregar
+        function changeCardQty(productId, delta) {
+            const qtyEl = document.getElementById(`card-qty-${productId}`);
+            if (!qtyEl) return;
+            let current = parseInt(qtyEl.innerText, 10) || 1;
+            current = Math.max(1, current + delta);
+            qtyEl.innerText = current;
+        }
+
+        // Renderizar Cuadrícula Completa de Productos
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            const noResults = document.getElementById('noResults');
+            const counterBadge = document.getElementById('catalogCounterBadge');
+            if (!grid) return;
+
+            const filtered = PRODUCTS.filter(p => {
+                const matchesCat = selectedCategory === "Todos" || p.category === selectedCategory;
+                const catLabel = getCategoryLabel(p.category).toLowerCase();
+                const matchesQuery = !searchQuery ||
+                    p.name.toLowerCase().includes(searchQuery) ||
+                    catLabel.includes(searchQuery) ||
+                    p.unit.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesQuery;
+            });
+
+            if (counterBadge) {
+                counterBadge.innerText = `Mostrando ${filtered.length} de ${PRODUCTS.length} productos`;
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = "";
+                if (noResults) noResults.classList.remove('hidden');
+                return;
+            }
+
+            if (noResults) noResults.classList.add('hidden');
+
+            grid.innerHTML = filtered.map(product => {
+                const hasDualPricing = product.isHoliday && product.unitPrice !== null && product.unitPrice !== undefined;
+                const currentMode = selectedModes[product.id] || "Kilo";
+                const activePrice = hasDualPricing
+                    ? (currentMode === "Unidad" ? product.unitPrice : product.kiloPrice)
+                    : product.price;
+                const activeUnit = hasDualPricing ? currentMode : product.unit;
+
+                const cardBorderClass = product.isHoliday
+                    ? "border-2 border-festive-gold/70 hover:border-festive-red"
+                    : "border border-leaf-500/25 hover:border-citrus-500";
+
+                const dualSelectorHtml = hasDualPricing ? `
+                    <div class="grid grid-cols-2 gap-1.5 bg-white/80 p-1 rounded-xl border border-festive-red/20 mb-3">
+                        <button type="button" onclick="setProductMode(${product.id}, 'Kilo')"
+                                class="py-1.5 px-2 rounded-lg text-[11px] font-extrabold transition-all ${currentMode === 'Kilo' ? 'bg-forest-900 text-banana-400 shadow-sm' : 'text-slate-600 hover:bg-cream-50'}">
+                            Por Kilo (${formatCRC(product.kiloPrice)})
+                        </button>
+                        <button type="button" onclick="setProductMode(${product.id}, 'Unidad')"
+                                class="py-1.5 px-2 rounded-lg text-[11px] font-extrabold transition-all ${currentMode === 'Unidad' ? 'bg-festive-red text-white shadow-sm' : 'text-slate-600 hover:bg-cream-50'}">
+                            Por Unidad (${formatCRC(product.unitPrice)})
+                        </button>
+                    </div>
+                ` : (product.isHoliday ? `
+                    <div class="mb-3 px-2.5 py-1.5 rounded-xl bg-white/80 border border-festive-red/20 text-[11px] font-bold text-festive-red text-center">
+                        Venta exclusiva por Kilo (Granel / Bandeja)
+                    </div>
+                ` : "");
+
+                return `
+                    <article class="${product.bgColor} rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between ${cardBorderClass} group">
+                        <div>
+                            <!-- Imagen y Etiqueta -->
+                            <div class="relative h-44 overflow-hidden bg-white">
+                                <img src="${product.image}" alt="${product.name}" loading="lazy"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.src='https://placehold.co/600x400/E6F4EA/1E4620?text=XMJ+Fresco'">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wide shadow-sm ${product.badgeColor}">
+                                    ${product.tag}
+                                </span>
+                                <span class="absolute bottom-2.5 right-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/90 text-forest-900 shadow-sm">
+                                    ${getCategoryLabel(product.category)}
+                                </span>
+                            </div>
+
+                            <!-- Información del Producto -->
+                            <div class="p-4 pb-2">
+                                <h3 class="font-extrabold text-forest-900 text-base leading-snug line-clamp-2 min-h-[2.75rem]">
+                                    ${product.name}
+                                </h3>
+
+                                <div class="mt-2 mb-3 flex items-baseline justify-between gap-2">
+                                    <div>
+                                        <span class="text-xl font-extrabold text-citrus-600">${formatCRC(activePrice)}</span>
+                                        <span class="text-xs font-semibold text-slate-600"> / ${activeUnit}</span>
+                                    </div>
+                                </div>
+
+                                ${dualSelectorHtml}
+                            </div>
+                        </div>
+
+                        <!-- Selector de Cantidad y Botón Agregar -->
+                        <div class="p-4 pt-1 flex items-center gap-2">
+                            <div class="flex items-center bg-white rounded-xl border border-forest-900/20 shadow-xs">
+                                <button type="button" onclick="changeCardQty(${product.id}, -1)" 
+                                        class="w-8 h-9 text-forest-900 hover:bg-pastel-mint font-extrabold rounded-l-xl transition-colors">-</button>
+                                <span id="card-qty-${product.id}" class="w-8 text-center text-xs font-extrabold text-forest-900">1</span>
+                                <button type="button" onclick="changeCardQty(${product.id}, 1)" 
+                                        class="w-8 h-9 text-forest-900 hover:bg-pastel-mint font-extrabold rounded-r-xl transition-colors">+</button>
+                            </div>
+
+                            <button type="button" onclick="addToCart(${product.id})" 
+                                    class="flex-1 h-9 bg-forest-900 hover:bg-forest-800 text-banana-400 font-extrabold text-xs rounded-xl shadow transition-all flex items-center justify-center gap-1.5 active:scale-95">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // Agregar Producto al Carrito
+        function addToCart(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const qtyEl = document.getElementById(`card-qty-${productId}`);
+            const qty = qtyEl ? (parseInt(qtyEl.innerText, 10) || 1) : 1;
+
+            const hasDualPricing = product.isHoliday && product.unitPrice !== null && product.unitPrice !== undefined;
+            const currentMode = selectedModes[product.id] || "Kilo";
+            const activePrice = hasDualPricing
+                ? (currentMode === "Unidad" ? product.unitPrice : product.kiloPrice)
+                : product.price;
+            const selectedUnit = hasDualPricing ? currentMode : product.unit;
+            const cartKey = `${product.id}-${selectedUnit}`;
+            const displayName = hasDualPricing ? `${product.name} (${selectedUnit})` : product.name;
+
+            const existing = cart.find(item => item.cartKey === cartKey);
+            if (existing) {
+                existing.quantity += qty;
+            } else {
+                cart.push({
+                    cartKey,
+                    product,
+                    displayName,
+                    selectedUnit,
+                    activePrice,
+                    quantity: qty
+                });
+            }
+
+            if (qtyEl) qtyEl.innerText = "1";
+            updateCartUI();
+            showToast(`Agregado: ${qty} ${selectedUnit}(s) de ${product.name}`);
+        }
+
+        // Actualizar Cantidad en el Carrito
+        function updateCartItemQty(cartKey, delta) {
+            const index = cart.findIndex(item => item.cartKey === cartKey);
+            if (index === -1) return;
+
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        // Eliminar del Carrito
+        function removeFromCart(cartKey) {
+            cart = cart.filter(item => item.cartKey !== cartKey);
+            updateCartUI();
+        }
+
+        // Cambiar modalidad de entrega entre Retiro en Local y Envío a Domicilio
+        function setDeliveryMethod(method) {
+            deliveryMethod = method;
+
+            const btnPickup = document.getElementById('btnDeliveryPickup');
+            const btnHome = document.getElementById('btnDeliveryHome');
+            const pickupBanner = document.getElementById('pickupInfoBanner');
+            const deliveryBanner = document.getElementById('deliveryFeeBanner');
+            const deliveryFields = document.getElementById('deliveryFieldsContainer');
+
+            if (method === 'pickup') {
+                btnPickup.className = "py-2.5 px-3 rounded-xl text-xs font-extrabold transition-all flex items-center justify-center gap-1.5 bg-forest-900 text-banana-400 shadow";
+                btnHome.className = "py-2.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 text-forest-900 hover:bg-pastel-mint";
+                pickupBanner.classList.remove('hidden');
+                deliveryBanner.classList.add('hidden');
+                deliveryFields.classList.add('hidden');
+            } else {
+                btnHome.className = "py-2.5 px-3 rounded-xl text-xs font-extrabold transition-all flex items-center justify-center gap-1.5 bg-citrus-600 text-white shadow";
+                btnPickup.className = "py-2.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 text-forest-900 hover:bg-pastel-mint";
+                pickupBanner.classList.add('hidden');
+                deliveryBanner.classList.remove('hidden');
+                deliveryFields.classList.remove('hidden');
+            }
+
+            updateCartUI();
+        }
+
+        // Calcular Subtotal
+        function getSubtotal() {
+            return cart.reduce((sum, item) => sum + (item.activePrice * item.quantity), 0);
+        }
+
+        // Actualizar Interfaz del Carrito
+        function updateCartUI() {
+            const totalItemsCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const subtotal = getSubtotal();
+
+            const countBadge = document.getElementById('cartCountBadge');
+            const totalHeader = document.getElementById('cartTotalHeader');
+            const subtotalText = document.getElementById('cartSubtotalText');
+
+            if (countBadge) countBadge.innerText = totalItemsCount;
+            if (totalHeader) totalHeader.innerText = formatCRC(subtotal);
+            if (subtotalText) subtotalText.innerText = formatCRC(subtotal);
+
+            const shippingTextEl = document.getElementById('shippingCostText');
+            const totalLabelEl = document.getElementById('cartTotalLabel');
+            const totalTextEl = document.getElementById('cartTotalText');
+            const totalNoteEl = document.getElementById('cartTotalNote');
+
+            if (shippingTextEl && totalLabelEl && totalTextEl && totalNoteEl) {
+                if (deliveryMethod === 'pickup') {
+                    shippingTextEl.innerText = "Gratis (Retiro en local - ₡0)";
+                    shippingTextEl.className = "text-leaf-600 font-extrabold text-right";
+                    totalLabelEl.innerText = "Total a pagar:";
+                    totalTextEl.innerText = formatCRC(subtotal);
+                    totalNoteEl.classList.add('hidden');
+                } else {
+                    shippingTextEl.innerText = "Costo adicional (a confirmar por WhatsApp)";
+                    shippingTextEl.className = "text-citrus-600 font-extrabold text-right text-[11px]";
+                    totalLabelEl.innerText = "Total productos:";
+                    totalTextEl.innerText = `${formatCRC(subtotal)} + envío`;
+                    if (subtotal > 0) {
+                        totalNoteEl.classList.remove('hidden');
+                    } else {
+                        totalNoteEl.classList.add('hidden');
+                    }
+                }
+            }
+
+            const container = document.getElementById('cartItemsContainer');
+            if (!container) return;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12">
+                        <i class="fa-solid fa-basket-shopping text-4xl text-leaf-500/40 mb-3"></i>
+                        <p class="text-forest-900 font-bold text-sm">Su canasta está vacía</p>
+                        <p class="text-slate-500 text-xs mt-1">Agregue productos frescos y naturales de XMJ.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="flex items-center gap-3 bg-white p-3 rounded-2xl border border-leaf-500/25 shadow-sm">
+                    <img src="${item.product.image}" alt="${item.displayName}" class="w-14 h-14 object-cover rounded-xl bg-cream-50 border border-slate-100"
+                         onerror="this.src='https://placehold.co/150x150/E6F4EA/1E4620?text=XMJ'">
+                    
+                    <div class="flex-1 min-w-0">
+                        <h4 class="font-extrabold text-xs text-forest-900 truncate">${item.displayName}</h4>
+                        <div class="text-[11px] text-slate-500 mt-0.5">
+                            ${formatCRC(item.activePrice)} / ${item.selectedUnit}
+                        </div>
+                        <div class="font-bold text-xs text-citrus-600 mt-0.5">
+                            Subtotal: ${formatCRC(item.activePrice * item.quantity)}
+                        </div>
+                    </div>
+
+                    <!-- Controles de cantidad -->
+                    <div class="flex flex-col items-end gap-1">
+                        <button type="button" onclick="removeFromCart('${item.cartKey}')" class="text-slate-400 hover:text-red-500 text-xs p-1" title="Eliminar producto">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <div class="flex items-center bg-cream-50 rounded-lg border border-forest-900/20">
+                            <button type="button" onclick="updateCartItemQty('${item.cartKey}', -1)" class="w-6 h-6 text-forest-900 flex items-center justify-center font-bold text-xs hover:bg-pastel-mint rounded-l-lg">-</button>
+                            <span class="px-2 text-xs font-extrabold text-forest-900">${item.quantity}</span>
+                            <button type="button" onclick="updateCartItemQty('${item.cartKey}', 1)" class="w-6 h-6 text-forest-900 flex items-center justify-center font-bold text-xs hover:bg-pastel-mint rounded-r-lg">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Abrir / Cerrar Carrito
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const backdrop = document.getElementById('cartDrawerBackdrop');
+            if (!drawer || !backdrop) return;
+            
+            const isOpen = !drawer.classList.contains('translate-x-full');
+
+            if (isOpen) {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('opacity-0');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            } else {
+                backdrop.classList.remove('hidden');
+                setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+                drawer.classList.remove('translate-x-full');
+            }
+        }
+
+        // Notificación Toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            if (!toast || !toastMessage) return;
+            
+            toastMessage.innerText = message;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        // Enviar Pedido Formateado a WhatsApp (50670861827)
+        function sendOrderToWhatsApp() {
+            if (cart.length === 0) {
+                showToast("Por favor agregue al menos un producto a su canasta.");
+                return;
+            }
+
+            const name = document.getElementById('custName').value.trim();
+            const payment = document.getElementById('custPayment').value;
+            const location = document.getElementById('custLocation').value;
+            const address = document.getElementById('custAddress').value.trim();
+
+            if (!name) {
+                showToast("Por favor ingrese su nombre completo.");
+                return;
+            }
+
+            if (deliveryMethod === 'delivery' && !address) {
+                showToast("Por favor ingrese su dirección exacta para el envío a domicilio.");
+                return;
+            }
+
+            const subtotal = getSubtotal();
+
+            let msg = `🌿 *NUEVO PEDIDO - XMJ FRUTERÍA & VERDURERÍA* 🇨🇷\n`;
+            msg += `_Frescos y Naturales_\n\n`;
+            msg += `👤 *Cliente:* ${name}\n`;
+
+            if (deliveryMethod === 'pickup') {
+                msg += `🏪 *Modalidad:* Retiro en Local (San Isidro, Alajuela)\n`;
+            } else {
+                msg += `🚚 *Modalidad:* Envío a Domicilio (con costo adicional a confirmar)\n`;
+                msg += `📍 *Zona:* ${location}\n`;
+                msg += `🏠 *Dirección Exacta:* ${address}\n`;
+            }
+
+            msg += `💳 *Método de Pago:* ${payment}\n\n`;
+            msg += `🧺 *DETALLE DEL PEDIDO:*\n`;
+
+            cart.forEach(item => {
+                const itemTotal = item.activePrice * item.quantity;
+                msg += `• ${item.quantity} ${item.selectedUnit}(s) x ${item.displayName} = ${formatCRC(itemTotal)}\n`;
+            });
+
+            msg += `\n💵 *Subtotal Productos:* ${formatCRC(subtotal)}`;
+            if (deliveryMethod === 'pickup') {
+                msg += `\n🚚 *Envío:* Gratis (Retiro en local - ₡0)`;
+                msg += `\n💰 *TOTAL A PAGAR:* ${formatCRC(subtotal)}\n\n`;
+            } else {
+                msg += `\n🚚 *Envío:* Costo adicional según zona (a confirmar por WhatsApp)`;
+                msg += `\n💰 *TOTAL ESTIMADO:* ${formatCRC(subtotal)} + costo de envío\n\n`;
+            }
+
+            if (payment.includes("SINPE")) {
+                msg += `📌 *Nota SINPE Móvil:* Realizar la transferencia al número *7086-1827* a nombre de XMJ Frutería & Verdurería y adjuntar el comprobante por este medio.\n\n`;
+            }
+
+            msg += `¡Muchas gracias! Quedo atento(a) a la confirmación de mi pedido.`;
+
+            const encodedMessage = encodeURIComponent(msg);
+            const whatsappURL = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Inicialización segura inmediata y al cargar el DOM
+        function initApp() {
+            renderCategories();
+            renderProducts();
+            updateCartUI();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+    </script>
+</body>
+</html>
