@@ -165,7 +165,7 @@
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-green-100 text-xs font-semibold mb-4">
           <i class="fa-solid fa-seedling text-citrus-bright"></i>
-          <span>Calidad fresca todos los días • Catálogo Oficial (48 Productos)</span>
+          <span>Calidad fresca todos los días • Catálogo Oficial (49 Productos)</span>
         </div>
 
         <h1 class="text-2xl sm:text-4xl lg:text-[2.6rem] font-extrabold tracking-tight text-white leading-tight mb-4">
@@ -230,7 +230,7 @@
       <div class="flex items-center justify-between gap-4">
         <div id="category-filters" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
           <button type="button" data-category="Todos" class="cat-btn active px-4 py-2 rounded-xl text-sm font-semibold bg-forest text-white shadow-xs whitespace-nowrap transition-all cursor-pointer">
-            Todos (48)
+            Todos (49)
           </button>
           <button type="button" data-category="Frutas" class="cat-btn px-4 py-2 rounded-xl text-sm font-semibold bg-gray-100 text-gray-700 hover:bg-leaf-light hover:text-forest whitespace-nowrap transition-all cursor-pointer">
             🍎 Frutas
@@ -247,7 +247,7 @@
         </div>
 
         <div class="hidden lg:block text-xs font-medium text-gray-500 shrink-0">
-          Mostrando <span id="visible-count" class="font-bold text-forest">48</span> de 48 productos
+          Mostrando <span id="visible-count" class="font-bold text-forest">49</span> de 49 productos
         </div>
       </div>
     </div>
@@ -263,7 +263,7 @@
       <h2 class="text-lg font-bold text-gray-800 mb-1">No encontramos ese producto</h2>
       <p class="text-sm text-gray-500 mb-4">Intenta buscar con otro nombre o revisa todas las categorías disponibles.</p>
       <button id="reset-filters-btn" type="button" class="px-5 py-2.5 rounded-xl bg-forest text-white text-sm font-semibold hover:bg-forest-light transition-colors cursor-pointer">
-        Ver los 48 productos
+        Ver los 49 productos
       </button>
     </div>
 
@@ -505,60 +505,61 @@
   <!-- Lógica Completa del Catálogo y Carrito -->
   <script>
     /**
-     * Catálogo exacto de los 48 productos de Producto_3.docx en el mismo orden.
+     * Catálogo exacto de los 49 productos de Producto_4.docx en el mismo orden.
      * Cada producto cuenta con una ilustración SVG limpia y fiel sobre fondo blanco
      * (sin texto ni etiquetas superpuestas dentro de la imagen) para garantizar
      * carga instantánea, nitidez absoluta y cero enlaces rotos.
      */
     const PRODUCTS = [
-      { id: 1, name: "Apio", unit: "Mata", price: 2100, category: "Hierbas / Condimentos", art: "apio" },
-      { id: 2, name: "Ayote sazon", unit: "kilo", price: 500, category: "Verduras", art: "ayote" },
-      { id: 3, name: "banano", unit: "unidad", price: 50, category: "Frutas", art: "banano" },
-      { id: 4, name: "Brocoli", unit: "kilo", price: 1850, category: "Verduras", art: "brocoli" },
-      { id: 5, name: "Camote", unit: "kilo", price: 1850, category: "Verduras", art: "camote" },
-      { id: 6, name: "Cebolla amarilla", unit: "kilo", price: 1400, category: "Hortalizas", art: "cebolla_amarilla" },
-      { id: 7, name: "Cebolla morada", unit: "kilo", price: 1700, category: "Hortalizas", art: "cebolla_morada" },
-      { id: 8, name: "chayote tierno criollo", unit: "unidad", price: 250, category: "Verduras", art: "chayote" },
-      { id: 9, name: "chile dulce jumbo", unit: "unidad", price: 900, category: "Hortalizas", art: "chile_dulce" },
-      { id: 10, name: "chile dulce 1°", unit: "unidad", price: 600, category: "Hortalizas", art: "chile_dulce" },
-      { id: 11, name: "chile dulce 2 °", unit: "unidad", price: 450, category: "Hortalizas", art: "chile_dulce" },
-      { id: 12, name: "coliflor 1°", unit: "unidad", price: 2800, category: "Verduras", art: "coliflor" },
-      { id: 13, name: "culantro castilla", unit: "rollo", price: 200, category: "Hierbas / Condimentos", art: "culantro" },
-      { id: 14, name: "elote", unit: "unidad", price: 225, category: "Verduras", art: "elote" },
-      { id: 15, name: "jengibre", unit: "unidad", price: 1400, category: "Hierbas / Condimentos", art: "jengibre" },
-      { id: 16, name: "Lechuga amaericana", unit: "unidad", price: 500, category: "Hortalizas", art: "lechuga" },
-      { id: 17, name: "limon mandarino", unit: "unidad", price: 100, category: "Frutas", art: "limon_mandarino" },
-      { id: 18, name: "limon mesino", unit: "unidad", price: 150, category: "Frutas", art: "limon_mesino" },
-      { id: 19, name: "mandarina", unit: "unidad", price: 350, category: "Frutas", art: "mandarina" },
-      { id: 20, name: "manga", unit: "kilo", price: 2300, category: "Frutas", art: "manga" },
-      { id: 21, name: "melon", unit: "kilo", price: 1275, category: "Frutas", art: "melon" },
-      { id: 22, name: "naranja", unit: "unidad", price: 200, category: "Frutas", art: "naranja" },
-      { id: 23, name: "ñanpi", unit: "kilo", price: 1400, category: "Verduras", art: "nampi" },
-      { id: 24, name: "papa", unit: "kilo", price: 800, category: "Verduras", art: "papa" },
-      { id: 25, name: "papaya", unit: "kilo", price: 1300, category: "Frutas", art: "papaya" },
-      { id: 26, name: "pepino", unit: "kilo", price: 500, category: "Hortalizas", art: "pepino" },
-      { id: 27, name: "piña", unit: "unidad", price: 1400, category: "Frutas", art: "pina" },
-      { id: 28, name: "plátano maduro", unit: "unidad", price: 350, category: "Verduras", art: "platano_maduro" },
-      { id: 29, name: "plátano verde", unit: "unidad", price: 350, category: "Verduras", art: "platano_verde" },
-      { id: 30, name: "remolacha", unit: "unidad", price: 700, category: "Hortalizas", art: "remolacha" },
-      { id: 31, name: "repollo morado", unit: "kilo", price: 2800, category: "Hortalizas", art: "repollo_morado" },
-      { id: 32, name: "repollo verde", unit: "kilo", price: 900, category: "Hortalizas", art: "repollo_verde" },
-      { id: 33, name: "sandia", unit: "kilo", price: 800, category: "Frutas", art: "sandia" },
-      { id: 34, name: "tiquisque", unit: "kilo", price: 3250, category: "Verduras", art: "tiquisque" },
-      { id: 35, name: "tomate", unit: "kilo", price: 1500, category: "Hortalizas", art: "tomate" },
-      { id: 36, name: "vainica", unit: "kilo", price: 1000, category: "Verduras", art: "vainica" },
-      { id: 37, name: "yuca parafinada", unit: "kilo", price: 600, category: "Verduras", art: "yuca" },
-      { id: 38, name: "zanahoria", unit: "kilo", price: 1200, category: "Hortalizas", art: "zanahoria" },
-      { id: 39, name: "zucchini", unit: "kilo", price: 500, category: "Verduras", art: "zucchini" },
-      { id: 40, name: "uva globo", unit: "bandeja kilo", price: 4300, category: "Frutas", art: "uva_globo" },
-      { id: 41, name: "uva negra", unit: "bandeja kilo", price: 5700, category: "Frutas", art: "uva_negra" },
-      { id: 42, name: "uva verde", unit: "bandeja kilo", price: 5700, category: "Frutas", art: "uva_verde" },
-      { id: 43, name: "arandanos", unit: "bandeja 125g", price: 1900, category: "Frutas", art: "arandanos" },
-      { id: 44, name: "manzana roja", unit: "unidad", price: 550, category: "Frutas", art: "manzana_roja" },
-      { id: 45, name: "manzana verde", unit: "unidad", price: 550, category: "Frutas", art: "manzana_verde" },
-      { id: 46, name: "manzana golden", unit: "unidad", price: 550, category: "Frutas", art: "manzana_golden" },
-      { id: 47, name: "manzana gala", unit: "unidad", price: 550, category: "Frutas", art: "manzana_gala" },
-      { id: 48, name: "pera", unit: "unidad", price: 550, category: "Frutas", art: "pera" }
+      { id: 1, name: "APIO", unit: "MATA", price: 2100, category: "Hierbas / Condimentos", art: "apio" },
+      { id: 2, name: "AYOTE SAZON", unit: "KILO", price: 500, category: "Verduras", art: "ayote" },
+      { id: 3, name: "AGUACATE HASS", unit: "KILO", price: 2100, category: "Frutas", art: "aguacate_hass" },
+      { id: 4, name: "BANANO", unit: "UNIDAD", price: 50, category: "Frutas", art: "banano" },
+      { id: 5, name: "BROCOLI", unit: "KILO", price: 1850, category: "Verduras", art: "brocoli" },
+      { id: 6, name: "CAMOTE", unit: "KILO", price: 1850, category: "Verduras", art: "camote" },
+      { id: 7, name: "CEBOLLA AMARILLA", unit: "KILO", price: 1400, category: "Hortalizas", art: "cebolla_amarilla" },
+      { id: 8, name: "CEBOLLA MORADA", unit: "KILO", price: 1700, category: "Hortalizas", art: "cebolla_morada" },
+      { id: 9, name: "CHAYOTE TIERNO CRIOLLO", unit: "UNIDAD", price: 250, category: "Verduras", art: "chayote" },
+      { id: 10, name: "CHILE DULCE JUMBO", unit: "UNIDAD", price: 900, category: "Hortalizas", art: "chile_dulce" },
+      { id: 11, name: "CHILE DULCE 1°", unit: "UNIDAD", price: 600, category: "Hortalizas", art: "chile_dulce" },
+      { id: 12, name: "CHILE DULCE 2°", unit: "UNIDAD", price: 450, category: "Hortalizas", art: "chile_dulce" },
+      { id: 13, name: "COLIFLOR 1°", unit: "UNIDAD", price: 2800, category: "Verduras", art: "coliflor" },
+      { id: 14, name: "CULANTRO CASTILLA", unit: "ROLLO", price: 200, category: "Hierbas / Condimentos", art: "culantro" },
+      { id: 15, name: "ELOTE", unit: "UNIDAD", price: 225, category: "Verduras", art: "elote" },
+      { id: 16, name: "JENGIBRE", unit: "UNIDAD", price: 1400, category: "Hierbas / Condimentos", art: "jengibre" },
+      { id: 17, name: "LECHUGA AMAERICANA", unit: "UNIDAD", price: 500, category: "Hortalizas", art: "lechuga" },
+      { id: 18, name: "LIMON MANDARINO", unit: "UNIDAD", price: 100, category: "Frutas", art: "limon_mandarino" },
+      { id: 19, name: "LIMON MESINO", unit: "UNIDAD", price: 150, category: "Frutas", art: "limon_mesino" },
+      { id: 20, name: "MANDARINA", unit: "UNIDAD", price: 350, category: "Frutas", art: "mandarina" },
+      { id: 21, name: "MANGA", unit: "KILO", price: 2300, category: "Frutas", art: "manga" },
+      { id: 22, name: "MELON", unit: "KILO", price: 1275, category: "Frutas", art: "melon" },
+      { id: 23, name: "NARANJA", unit: "UNIDAD", price: 200, category: "Frutas", art: "naranja" },
+      { id: 24, name: "ÑANPI", unit: "KILO", price: 1400, category: "Verduras", art: "nampi" },
+      { id: 25, name: "PAPA", unit: "KILO", price: 800, category: "Verduras", art: "papa" },
+      { id: 26, name: "PAPAYA", unit: "KILO", price: 1300, category: "Frutas", art: "papaya" },
+      { id: 27, name: "PEPINO", unit: "KILO", price: 500, category: "Hortalizas", art: "pepino" },
+      { id: 28, name: "PIÑA", unit: "UNIDAD", price: 1400, category: "Frutas", art: "pina" },
+      { id: 29, name: "PLÁTANO MADURO", unit: "UNIDAD", price: 350, category: "Verduras", art: "platano_maduro" },
+      { id: 30, name: "PLÁTANO VERDE", unit: "UNIDAD", price: 350, category: "Verduras", art: "platano_verde" },
+      { id: 31, name: "REMOLACHA", unit: "UNIDAD", price: 700, category: "Hortalizas", art: "remolacha" },
+      { id: 32, name: "REPOLLO MORADO", unit: "KILO", price: 2800, category: "Hortalizas", art: "repollo_morado" },
+      { id: 33, name: "REPOLLO VERDE", unit: "KILO", price: 900, category: "Hortalizas", art: "repollo_verde" },
+      { id: 34, name: "SANDIA", unit: "KILO", price: 800, category: "Frutas", art: "sandia" },
+      { id: 35, name: "TIQUISQUE", unit: "KILO", price: 3250, category: "Verduras", art: "tiquisque" },
+      { id: 36, name: "TOMATE", unit: "KILO", price: 1500, category: "Hortalizas", art: "tomate" },
+      { id: 37, name: "VAINICA", unit: "KILO", price: 1000, category: "Verduras", art: "vainica" },
+      { id: 38, name: "YUCA PARAFINADA", unit: "KILO", price: 600, category: "Verduras", art: "yuca" },
+      { id: 39, name: "ZANAHORIA", unit: "KILO", price: 1200, category: "Hortalizas", art: "zanahoria" },
+      { id: 40, name: "ZUCCHINI", unit: "KILO", price: 500, category: "Verduras", art: "zucchini" },
+      { id: 41, name: "UVA GLOBO", unit: "BANDEJA KILO", price: 4300, category: "Frutas", art: "uva_globo" },
+      { id: 42, name: "UVA NEGRA", unit: "BANDEJA KILO", price: 5700, category: "Frutas", art: "uva_negra" },
+      { id: 43, name: "UVA VERDE", unit: "BANDEJA KILO", price: 5700, category: "Frutas", art: "uva_verde" },
+      { id: 44, name: "ARANDANOS", unit: "BANDEJA 125G", price: 1900, category: "Frutas", art: "arandanos" },
+      { id: 45, name: "MANZANA ROJA", unit: "UNIDAD", price: 550, category: "Frutas", art: "manzana_roja" },
+      { id: 46, name: "MANZANA VERDE", unit: "UNIDAD", price: 550, category: "Frutas", art: "manzana_verde" },
+      { id: 47, name: "MANZANA GOLDEN", unit: "UNIDAD", price: 550, category: "Frutas", art: "manzana_golden" },
+      { id: 48, name: "MANZANA GALA", unit: "UNIDAD", price: 550, category: "Frutas", art: "manzana_gala" },
+      { id: 49, name: "PERA", unit: "UNIDAD", price: 550, category: "Frutas", art: "pera" }
     ];
 
     /**
@@ -599,6 +600,25 @@
             <!-- Gajo cortado mostrando pulpa naranja intenso -->
             <path d="M72 82 C54 96, 56 132, 82 146 L108 134 C94 118, 94 96, 106 84 Z" fill="#FF8F00" stroke="#E65100" stroke-width="2"/>
             <path d="M78 88 C66 100, 68 124, 84 136 L100 128 C90 116, 90 100, 98 90 Z" fill="#FFB300"/>
+          </g>
+        `),
+        aguacate_hass: wrap(`
+          <g>
+            <!-- Aguacate entero trasero izquierdo -->
+            <ellipse cx="88" cy="96" rx="28" ry="34" transform="rotate(-12 88 96)" fill="#2D2926" stroke="#1B1917" stroke-width="2"/>
+            <!-- Aguacate entero derecho con tallo y hoja -->
+            <path d="M134 52 C116 58, 108 88, 114 116 C118 134, 134 142, 150 136 C166 130, 174 106, 168 80 C162 58, 148 48, 134 52 Z" fill="#322D29" stroke="#1B1917" stroke-width="2"/>
+            <path d="M136 52 L134 42" stroke="#6D4C41" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M136 45 C150 38, 168 42, 176 54 C162 56, 146 54, 136 45 Z" fill="#2E7D32" stroke="#1B5E20" stroke-width="1.5"/>
+            <!-- Mitad frontal cortada mostrando pulpa cremosa y semilla -->
+            <g transform="rotate(24 114 112)">
+              <ellipse cx="114" cy="112" rx="27" ry="40" fill="#2B3A1E" stroke="#1B2612" stroke-width="2.5"/>
+              <ellipse cx="114" cy="112" rx="23" ry="36" fill="#9CCC65"/>
+              <ellipse cx="114" cy="112" rx="19" ry="31" fill="#E6EE9C"/>
+              <!-- Semilla marrón brillante -->
+              <circle cx="112" cy="122" r="13" fill="#795548" stroke="#4E342E" stroke-width="1.5"/>
+              <ellipse cx="108" cy="118" rx="4" ry="2.5" transform="rotate(-30 108 118)" fill="#BCAAA4" opacity="0.75"/>
+            </g>
           </g>
         `),
         banano: wrap(`
@@ -1160,7 +1180,7 @@
                     ${product.category}
                   </span>
 
-                  <h3 class="text-base font-bold text-forest leading-snug capitalize">
+                  <h3 class="text-base font-bold text-forest leading-snug uppercase">
                     ${product.name}
                   </h3>
 
@@ -1332,7 +1352,7 @@
             </div>
             <h3 class="font-bold text-gray-800 text-base mb-1">Tu carrito está vacío</h3>
             <p class="text-xs text-gray-500 leading-relaxed">
-              Explora nuestros 48 productos frescos y agrega tus favoritos para armar tu pedido.
+              Explora nuestros 49 productos frescos y agrega tus favoritos para armar tu pedido.
             </p>
           </div>
         `;
